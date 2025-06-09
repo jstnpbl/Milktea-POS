@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Tea Shop POS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <h1>
+                <span class="header-icon" aria-label="Leaf" title="Leaf">🍃</span>
+                <span class="header-title">Tea Bliss POS</span>
+            </h1>
+            <div class="header-tagline">Sip, Smile, Repeat – The Easiest Way to Order Your Favorite Milk Tea!</div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" data-tab="menu">Menu</button>
+            <button class="nav-tab" data-tab="sales">Sales History</button>
+        </div>
+        
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <!-- Menu Tab Content -->
+            <div id="menu-tab" class="tab-content">
+                <!-- Signature Milk Teas -->
+                <div class="menu-category">
+                    <h3 class="category-title">🧋 Signature Milk Teas</h3>
+                    <button class="add-drink-btn" type="button">+ Add Drink</button>
+                    <div class="menu-grid">
+                        <div class="menu-item" data-name="Classic Milk Tea" data-price="4.50">
+                            <div class="item-icon">🧋</div>
+                            <div class="item-name">Classic Milk Tea</div>
+                            <div class="item-price">$4.50</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Taro Milk Tea" data-price="5.25">
+                            <div class="item-icon">🟣</div>
+                            <div class="item-name">Taro Milk Tea</div>
+                            <div class="item-price">$5.25</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Thai Milk Tea" data-price="5.00">
+                            <div class="item-icon">🧡</div>
+                            <div class="item-name">Thai Milk Tea</div>
+                            <div class="item-price">$5.00</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Matcha Milk Tea" data-price="5.50">
+                            <div class="item-icon">🍃</div>
+                            <div class="item-name">Matcha Milk Tea</div>
+                            <div class="item-price">$5.50</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Brown Sugar Milk Tea" data-price="6.00">
+                            <div class="item-icon">🤎</div>
+                            <div class="item-name">Brown Sugar Milk Tea</div>
+                            <div class="item-price">$6.00</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Honeydew Milk Tea" data-price="5.25">
+                            <div class="item-icon">🍈</div>
+                            <div class="item-name">Honeydew Milk Tea</div>
+                            <div class="item-price">$5.25</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Wintermelon Milk Tea" data-price="5.00">
+                            <div class="item-icon">🍯</div>
+                            <div class="item-name">Wintermelon Milk Tea</div>
+                            <div class="item-price">$5.00</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Okinawa Milk Tea" data-price="5.75">
+                            <div class="item-icon">🏝️</div>
+                            <div class="item-name">Okinawa Milk Tea</div>
+                            <div class="item-price">$5.75</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Jasmine Milk Tea" data-price="4.75">
+                            <div class="item-icon">🌼</div>
+                            <div class="item-name">Jasmine Milk Tea</div>
+                            <div class="item-price">$4.75</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Hazelnut Milk Tea" data-price="5.50">
+                            <div class="item-icon">🌰</div>
+                            <div class="item-name">Hazelnut Milk Tea</div>
+                            <div class="item-price">$5.50</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fruit Teas -->
+                <div class="menu-category">
+                    <h3 class="category-title">🍓 Fresh Fruit Teas</h3>
+                    <button class="add-drink-btn" type="button">+ Add Drink</button>
+                    <div class="menu-grid">
+                        <div class="menu-item" data-name="Strawberry Green Tea" data-price="4.75">
+                            <div class="item-icon">🍓</div>
+                            <div class="item-name">Strawberry Green Tea</div>
+                            <div class="item-price">$4.75</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Mango Passion Fruit Tea" data-price="5.25">
+                            <div class="item-icon">🥭</div>
+                            <div class="item-name">Mango Passion Fruit Tea</div>
+                            <div class="item-price">$5.25</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Peach Oolong Tea" data-price="4.75">
+                            <div class="item-icon">🍑</div>
+                            <div class="item-name">Peach Oolong Tea</div>
+                            <div class="item-price">$4.75</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Lychee Black Tea" data-price="4.50">
+                            <div class="item-icon">🔮</div>
+                            <div class="item-name">Lychee Black Tea</div>
+                            <div class="item-price">$4.50</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Pineapple Green Tea" data-price="4.75">
+                            <div class="item-icon">🍍</div>
+                            <div class="item-name">Pineapple Green Tea</div>
+                            <div class="item-price">$4.75</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Blueberry Fruit Tea" data-price="5.00">
+                            <div class="item-icon">🫐</div>
+                            <div class="item-name">Blueberry Fruit Tea</div>
+                            <div class="item-price">$5.00</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Watermelon Fruit Tea" data-price="4.75">
+                            <div class="item-icon">🍉</div>
+                            <div class="item-name">Watermelon Fruit Tea</div>
+                            <div class="item-price">$4.75</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Grapefruit Green Tea" data-price="5.00">
+                            <div class="item-icon">🍊</div>
+                            <div class="item-name">Grapefruit Green Tea</div>
+                            <div class="item-price">$5.00</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Apple Fruit Tea" data-price="4.50">
+                            <div class="item-icon">🍏</div>
+                            <div class="item-name">Apple Fruit Tea</div>
+                            <div class="item-price">$4.50</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Kiwi Fruit Tea" data-price="5.25">
+                            <div class="item-icon">🥝</div>
+                            <div class="item-name">Kiwi Fruit Tea</div>
+                            <div class="item-price">$5.25</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialty Drinks -->
+                <div class="menu-category">
+                    <h3 class="category-title">✨ Specialty Drinks</h3>
+                    <button class="add-drink-btn" type="button">+ Add Drink</button>
+                    <div class="menu-grid">
+                        <div class="menu-item" data-name="Cheese Foam Tea" data-price="6.50">
+                            <div class="item-icon">🧀</div>
+                            <div class="item-name">Cheese Foam Tea</div>
+                            <div class="item-price">$6.50</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Dirty Brown Sugar" data-price="7.00">
+                            <div class="item-icon">☕</div>
+                            <div class="item-name">Dirty Brown Sugar</div>
+                            <div class="item-price">$7.00</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Popping Boba Special" data-price="6.25">
+                            <div class="item-icon">🎈</div>
+                            <div class="item-name">Popping Boba Special</div>
+                            <div class="item-price">$6.25</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Salted Caramel Cream" data-price="6.75">
+                            <div class="item-icon">🍮</div>
+                            <div class="item-name">Salted Caramel Cream</div>
+                            <div class="item-price">$6.75</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Chocolate Mousse" data-price="6.50">
+                            <div class="item-icon">🍫</div>
+                            <div class="item-name">Chocolate Mousse</div>
+                            <div class="item-price">$6.50</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Coffee Jelly Latte" data-price="6.25">
+                            <div class="item-icon">🥤</div>
+                            <div class="item-name">Coffee Jelly Latte</div>
+                            <div class="item-price">$6.25</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Matcha Cream Cheese" data-price="6.75">
+                            <div class="item-icon">🍵</div>
+                            <div class="item-name">Matcha Cream Cheese</div>
+                            <div class="item-price">$6.75</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Oreo Crumble" data-price="6.50">
+                            <div class="item-icon">🍪</div>
+                            <div class="item-name">Oreo Crumble</div>
+                            <div class="item-price">$6.50</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Avocado Smoothie" data-price="7.00">
+                            <div class="item-icon">🥑</div>
+                            <div class="item-name">Avocado Smoothie</div>
+                            <div class="item-price">$7.00</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                        <div class="menu-item" data-name="Red Bean Matcha" data-price="6.75">
+                            <div class="item-icon">🫘</div>
+                            <div class="item-name">Red Bean Matcha</div>
+                            <div class="item-price">$6.75</div>
+                            <button type="button" class="quick-add-btn">+ Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales Tab Content -->
+            <div id="sales-tab" class="tab-content" style="display: none;">
+                <h3 class="category-title">📊 Daily Sales Summary</h3>
+                <div id="sales-summary">
+                    <div class="summary-row">
+                        <span>Total Orders:</span>
+                        <span id="total-orders">0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total Revenue:</span>
+                        <span id="total-revenue">$0.00</span>
+                    </div>
+                </div>
+                
+                <h4 style="margin: 1.5rem 0 1rem 0; color: #7c3aed;">Order History</h4>
+                <div id="sales-history">
+                    <div class="empty-sales">No orders yet today</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Cart -->
+        <div class="right-panel">
+            <div class="cart-header">
+                🛒 Current Order
+            </div>
+            
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart">Cart is empty</div>
+            </div>
+            
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (8.5%):</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Discount:</span>
+                    <input type="number" class="discount-input" id="discount" min="0" max="100" value="0" placeholder="0" step="1">%
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+            
+            <button class="checkout-btn" id="checkout-btn" disabled>Checkout</button>
+        </div>
+    </div>
+
+    <!-- Toppings Modal -->
+    <div id="toppings-modal" class="modal" tabindex="-1" aria-labelledby="toppings-modal-title" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="toppings-modal-title">Add Toppings</h2>
+                <span class="close" aria-label="Close">×</span>
+            </div>
+            <div class="toppings-grid">
+                <div class="topping-item">
+                    <input type="checkbox" id="pearls" value="0.75">
+                    <div class="topping-info">
+                        <div class="topping-name">Tapioca Pearls</div>
+                        <div class="topping-price">+$0.75</div>
+                    </div>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="nata" value="0.50">
+                    <div class="topping-info">
+                        <div class="topping-name">Nata de Coco</div>
+                        <div class="topping-price">+$0.50</div>
+                    </div>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="pudding" value="0.75">
+                    <div class="topping-info">
+                        <div class="topping-name">Egg Pudding</div>
+                        <div class="topping-price">+$0.75</div>
+                    </div>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="jelly" value="0.50">
+                    <div class="topping-info">
+                        <div class="topping-name">Grass Jelly</div>
+                        <div class="topping-price">+$0.50</div>
+                    </div>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="popping" value="1.00">
+                    <div class="topping-info">
+                        <div class="topping-name">Popping Boba</div>
+                        <div class="topping-price">+$1.00</div>
+                    </div>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="coconut" value="0.50">
+                    <div class="topping-info">
+                        <div class="topping-name">Coconut Jelly</div>
+                        <div class="topping-price">+$0.50</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button class="btn btn-primary" id="add-to-cart">Add to Cart</button>
+                <button class="btn btn-secondary" id="cancel-toppings">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Payment</h2>
+                <span class="close">×</span>
+            </div>
+            <div class="summary-row total" style="margin-bottom: 1rem;">
+                <span>Total Amount:</span>
+                <span id="payment-total">$0.00</span>
+            </div>
+            
+            <label for="cash-input" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Cash Received:</label>
+            <input type="number" class="payment-input" id="cash-input" placeholder="0.00" step="0.01" min="0">
+            
+            <div class="change-display" id="change-display" style="display: none;">
+                Change: $<span id="change-amount">0.00</span>
+            </div>
+            
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <button class="btn btn-primary" id="complete-payment" disabled>Complete Payment</button>
+                <button class="btn btn-secondary" id="cancel-payment">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div id="receipt-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Order Receipt</h2>
+                <span class="close">×</span>
+            </div>
+            <div class="receipt" id="receipt-content">
+                <!-- Receipt content will be generated here -->
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <button class="btn btn-primary" id="print-receipt">Print Receipt</button>
+                <button class="btn btn-secondary" id="new-order">New Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Drink Modal -->
+    <div id="add-drink-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add New Drink</h2>
+                <span class="close" id="close-add-drink-modal" aria-label="Close">×</span>
+            </div>
+            <form id="add-drink-form">
+                <label>
+                    Drink Name:
+                    <input type="text" id="new-drink-name" required style="width:100%;margin-bottom:0.5rem;">
+                </label>
+                <label>
+                    Price:
+                    <input type="number" id="new-drink-price" min="0" step="0.01" required style="width:100%;margin-bottom:0.5rem;">
+                </label>
+                <label>
+                    Icon (emoji or short text):
+                    <input type="text" id="new-drink-icon" maxlength="2" style="width:100%;margin-bottom:0.5rem;">
+                </label>
+                <input type="hidden" id="add-drink-category">
+                <div style="text-align:center;margin-top:1rem;">
+                    <button type="submit" class="btn btn-primary">Add Drink</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-add-drink">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
