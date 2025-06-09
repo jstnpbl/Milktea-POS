@@ -61,9 +61,9 @@ Built as a fully functional, single-page application that requires no backend in
 - **🖼️ Favicon and Branding**
   - Custom favicon support for a professional browser appearance
 
-## Demo
+## Screenshot
 
-*Live demo and screenshots coming soon*
+![image](https://github.com/user-attachments/assets/7cdbe6fd-f44c-4b1a-b7d7-19ca58afe54f)
 
 ## Tech Stack
 
