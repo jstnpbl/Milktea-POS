@@ -1,4 +1,4 @@
-# 🧋 Milk Tea Shop POS System
+# Milk Tea Shop POS System
 
 A complete, modern point-of-sale system designed specifically for small milk tea businesses, featuring beautiful pastel aesthetics and comprehensive order management capabilities.
 
@@ -211,19 +211,9 @@ The project demonstrates that powerful, professional applications can be built w
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Author
-
-**Your Name**
-- GitHub: [@jstnpbl](https://github.com/jstnpbl)
-
 ## Acknowledgments
 
 - Inspired by modern milk tea shop operations and POS system requirements
-- Color palette inspired by popular bubble tea aesthetics
 - Icons and emojis from Unicode standard
 - jQuery library for DOM manipulation and event handling
-- Special thanks to the bubble tea community for flavor and topping inspiration
 
----
-
-*Built for the bubble tea community.*
